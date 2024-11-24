@@ -30,21 +30,10 @@ void setup() {
   pinMode(PIN_SONIC_TRIGGER, OUTPUT);
   pinMode(PIN_SONIC_PULSE, INPUT);
 
-  digitalWrite(PIN_SONIC_TRIGGER, LOW);
-
   Serial.begin(9600);
 }
 
 void loop() {
-  long duration, distance;
-
-  digitalWrite(PIN_SONIC_TRIGGER, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(PIN_SONIC_TRIGGER, LOW);
-
-  duration = pulseIn(PIN_SONIC_PULSE, HIGH);
-  distance = duration * 0.034 / 2;
-
   if (digitalRead(PIN_PB_START) == LOW) {
     Serial.println("Start button pressed. Moving forward...");
 
