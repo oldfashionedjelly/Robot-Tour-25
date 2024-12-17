@@ -9,8 +9,6 @@
 #define PIN_MTR2_DIR_REV       8
 #define PIN_MTR1_PWM           9
 #define PIN_MTR2_PWM          10
-#define PIN_SONIC_PULSE       11
-#define PIN_SONIC_TRIGGER     12
 
 // This is def wrong idk what im doing
 #define ENCODER_COUNTS_PER_REV  540     
@@ -26,9 +24,6 @@ void setup() {
   pinMode(PIN_MTR2_DIR_REV, OUTPUT);
   pinMode(PIN_MTR1_PWM, OUTPUT);
   pinMode(PIN_MTR2_PWM, OUTPUT);
-
-  pinMode(PIN_SONIC_TRIGGER, OUTPUT);
-  pinMode(PIN_SONIC_PULSE, INPUT);
 
   Serial.begin(9600);
 }
