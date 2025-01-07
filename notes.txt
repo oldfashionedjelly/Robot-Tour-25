@@ -9,6 +9,7 @@ Remeasure times with full voltage
 Attach dowel
 Print data
 Tape wires
+Download code
 
 Packing:
 Screwdriver
@@ -17,3 +18,5 @@ Wires
 Measurements
 Tape
 Multi-tool
+USB drive
+Micro-usb cable and adapter
