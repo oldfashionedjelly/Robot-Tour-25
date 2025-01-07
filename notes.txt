@@ -1,3 +1,18 @@
 25cm = 1.5 secs
 50cm =  2.5 secs
 turn = 0.85 secs
+
+
+To do:
+Measure distance during turn
+Attach dowel
+Print data
+Tape wires
+
+Packing:
+Screwdriver
+Batteries
+Wires
+Measurements
+Tape
+Multi-tool
