@@ -2,7 +2,6 @@ import encoder
 from machine import Pin, PWM
 import time
 
-# Test with encoder on pins 2 and 3:
 leftEncoder = encoder.Encoder(0, Pin(16))
 rightEncoder = encoder.Encoder(1, Pin(18))
 
@@ -40,7 +39,7 @@ rightM = Motor(10, 11, 9, rightEncoder)
 def move(ticks, timeout=1.5):
     kP_L = 40
     kP_R = 40
-    k_I = 150
+    k_D = 150
     rStop = False
     lStop = False
     leftEncoder.position(0)
@@ -62,9 +61,9 @@ def move(ticks, timeout=1.5):
         print(lError, rError)
         print(lStop, rStop)
         if not lStop:
-            leftM.move((lError * kP_L + (lError - prevlError) * k_I))
+            leftM.move((lError * kP_L + (lError - prevlError) * k_D))
         if not rStop:
-            rightM.move(rError * kP_R + (rError - prevrError) * k_I)
+            rightM.move(rError * kP_R + (rError - prevrError) * k_D)
         if abs(lError) < 5 and (prevlError-lError == 0):
             print("L\n\n\n")
             lStop = True
@@ -81,7 +80,7 @@ def move(ticks, timeout=1.5):
 def turn(ticks):
     kP_L = 40
     kP_R = 40
-    k_I = 150
+    k_D = 150
     rStop = False
     lStop = False
     leftEncoder.position(0)
@@ -103,9 +102,9 @@ def turn(ticks):
         print(lError, rError)
         print(lStop, rStop)
         if not lStop:
-            leftM.move((lError * kP_L + (lError - prevlError) * k_I) * 0.8)
+            leftM.move((lError * kP_L + (lError - prevlError) * k_D) * 0.8)
         if not rStop:
-            rightM.move(rError * kP_R + (rError - prevrError) * k_I)
+            rightM.move(rError * kP_R + (rError - prevrError) * k_D)
         if abs(lError) < 5 and (prevlError-lError == 0):
             print("L\n\n\n")
             lStop = True
