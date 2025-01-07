@@ -5,6 +5,7 @@ turn = 0.85 secs
 
 To do:
 Measure distance during turn
+Remeasure times with full voltage
 Attach dowel
 Print data
 Tape wires
