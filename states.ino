@@ -19,7 +19,7 @@ void setup() {
 void loop() {
   if (digitalRead(PIN_PB_START) == LOW) {  
     
-    //add commands here
+    //commands here
 
     while (digitalRead(PIN_PB_START) == LOW) {
       delay(10);
@@ -35,10 +35,10 @@ void forward() {
   analogWrite(ENA, 200);
   analogWrite(ENB, 255);
 
-  delay(850); 
+  delay(950); 
 
   analogWrite(ENA, 0);  
-  delay(300);           
+  delay(150);           
   analogWrite(ENB, 0);  
 
   digitalWrite(IN1, LOW);
@@ -75,10 +75,10 @@ void backward() {
   analogWrite(ENA, 200);    
   analogWrite(ENB, 255);    
 
-  delay(850);  
+  delay(950);  
 
   analogWrite(ENA, 0);  
-  delay(300);           
+  delay(150);           
   analogWrite(ENB, 0);  
 
   digitalWrite(IN1, LOW);  
@@ -115,7 +115,7 @@ void turnLeft() {
   analogWrite(ENA, 255);
   analogWrite(ENB, 255);
 
-  delay(335); 
+  delay(325); 
 
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
@@ -131,7 +131,7 @@ void turnRight() {
   analogWrite(ENA, 255);
   analogWrite(ENB, 255);
 
-  delay(350); 
+  delay(335); 
 
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
